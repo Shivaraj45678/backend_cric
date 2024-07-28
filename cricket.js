@@ -1,9 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Users =require('./models/users.model')
+const cors = require('cors'); 
 const app=express();
 app.use(express.json());
-
+app.use(cors());
 app.listen(3001,()=>{
     console.log("running on loacalhost 3001")
 })
